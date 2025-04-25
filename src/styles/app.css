@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../../public/images/2.jpg") no-repeat center center fixed;
+background-size: cover;
+
+}
+
+.app {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.highlight {
+  color: #ff6600;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn,
+.join-btn {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.help-link,
+.login-link {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  padding: 50px 20px;
+}
+
+.hero-title {
+  margin-top: 130px;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.tagline h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.tagline p {
+  font-size: 20px;
+}
