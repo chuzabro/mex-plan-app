@@ -1,10 +1,10 @@
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #fff;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url("../../public/images/2.jpg") no-repeat center center fixed;
-background-size: cover;
-
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../public/images/2.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .app {
@@ -17,6 +17,7 @@ background-size: cover;
   align-items: center;
   padding: 20px;
   background-color: #000;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .logo {
@@ -29,30 +30,85 @@ background-size: cover;
   color: #ff6600;
 }
 
+/* Navbar Styles */
+.nav {
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  margin-top: 10px;
+  transition: max-height 0.3s ease-in-out;
+  
+  
+}
+
 .nav a {
-  margin: 0 15px;
+  margin: 5px 20px;
   color: #fff;
   text-decoration: none;
+ 
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-style: dotted;
+  text-decoration-color:orange; 
+}
+.nav a:active {
+
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-style: solid;
+  text-decoration-color:rgb(243, 243, 242); 
+  color:orange;
+}
+.nav.open {
+  max-height: 300px; /* Adjust based on the number of links */
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .actions {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.lang-btn,
+.lang-btn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
 .join-btn {
-  background-color: #ff6600;
+  background-color: #ff0000;
   color: #fff;
   border: none;
   padding: 10px 15px;
   margin-left: 10px;
   cursor: pointer;
   border-radius: 30px;
+  text-decoration: none;
 }
 
-.help-link,
-.login-link {
+.join-btn:hover {
+  background-color: #cc0000;
+}
+
+.help-link {
   margin-left: 15px;
   color: #fff;
   text-decoration: none;
@@ -62,22 +118,110 @@ background-size: cover;
   padding: 50px 20px;
 }
 
-.hero-title {
-  margin-top: 130px;
-  font-size: 60px;
-  margin-bottom: 10px;
+.hero {
+  text-align: center;
+  margin-top: 100px;
 }
 
-.hero-subtitle {
-  font-size: 25px;
-  margin-bottom: 40px;
+.branding-title {
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
-.tagline h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.branding-subtitle {
+  font-size: 30px;
+  color: #ccc;
+  font-weight: 500;
 }
 
-.tagline p {
-  font-size: 20px;
+.maxpain {
+  color: #ff0000;
+  font-size: 8rem;
+}
+
+.branding {
+  color: #ff0000;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .branding-title {
+    font-size: 35px;
+  }
+
+  .branding-subtitle {
+    font-size: 25px;
+  }
+
+  .maxpain {
+    font-size: 6rem;
+  }
+
+  .join-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack header elements */
+    align-items: center;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav {
+    flex-direction: column;
+    max-height: 200px(100%);
+    /* overflow: hidden; */
+  }
+
+  .nav.open {
+    max-height: 300px; /* Adjust based on the number of links */
+  }
+
+  .nav a {
+    margin: 10px 0;
+  }
+
+  .actions {
+    flex-direction: column; /* Stack action buttons */
+    margin-top: 10px;
+  }
+
+  .branding-title {
+    font-size: 30px;
+  }
+
+  .branding-subtitle {
+    font-size: 20px;
+  }
+
+  .maxpain {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .branding-title {
+    font-size: 25px;
+  }
+
+  .branding-subtitle {
+    font-size: 18px;
+  }
+
+  .maxpain {
+    font-size: 4rem;
+  }
+
+  .join-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
