@@ -95,6 +95,9 @@ const Signup = () => {
           Already have an account? <a href="/login">Log in</a>
         </p>
       </div>
+      <div className="bottom-right-logo">
+        <img src="/images/app-logo.png" alt="Logo" />
+      </div>
     </div>
   );
 };

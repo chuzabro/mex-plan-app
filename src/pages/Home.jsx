@@ -34,6 +34,9 @@ const Home = () => {
           </div>
         </div>
       </main>
+      <div className="bottom-right-logo">
+        <img src="/images/app-logo.png" alt="Logo" />
+      </div>
     </div>
   );
 };

@@ -145,6 +145,20 @@ body {
   font-weight: 100;
 }
 
+/* Bottom Right Logo */
+.bottom-right-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.bottom-right-logo img {
+  width: 200px; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 50%; /* Optional: Make it circular */
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .branding-title {
@@ -205,6 +219,19 @@ body {
   .maxpain {
     font-size: 5rem;
   }
+  .bottom-right-logo {
+    /* position: fixed; */
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  .bottom-right-logo img {
+    width: 80px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: Make it circular */
+    /* border: solid 2px wheat; */
+  }
 }
 
 @media (max-width: 480px) {
@@ -224,4 +251,18 @@ body {
     padding: 6px 10px;
     font-size: 12px;
   }
+  .bottom-right-logo {
+    /* position: fixed; */
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  .bottom-right-logo img {
+    width: 80px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Optional: Make it circular */
+    /* border: solid 2px wheat; */
+  }
+
 }
