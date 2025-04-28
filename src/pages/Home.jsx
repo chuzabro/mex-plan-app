@@ -1,20 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/app.css";
 
 const Home = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const languages = ["English", "Spanish", "French", "German", "Chinese","japanese","korean","Russian","arabic"];
+
+  const handleLanguageSelect = (language) => {
+    alert(`You selected: ${language}`);
+    setIsDropdownOpen(false); // Close the dropdown after selection
+  };
+
   return (
     <div className="app">
       <header className="header">
         <div className="logo">MAX<span className="highlight">PAIN</span></div>
         <nav className="nav">
-          <a href="#friends">Friends</a>
+          <a href="#attorneys">Friends</a>
           <a href="#subscribers">Subscribers</a>
           <a href="#providers">Providers</a>
-          <a href="#attorneys">Attorneys</a>
+          <a href="/friends">Attorneys</a>
           <a href="#meet-max-pain">Meet Max Pain</a>
         </nav>
         <div className="actions">
-          <button className="lang-btn">English</button>
+          <div className="dropdown">
+            <button className="lang-btn" onClick={toggleDropdown}>
+              English
+            </button>
+            {isDropdownOpen && (
+              <ul className="dropdown-menu">
+                {languages.map((language, index) => (
+                  <li
+                    key={index}
+                    className="dropdown-item"
+                    onClick={() => handleLanguageSelect(language)}
+                  >
+                    {language}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
           <a href="#contact-us" className="help-link">Contact Us</a>
           <a href="/signup" className="join-btn">Join MAX</a>
         </div>

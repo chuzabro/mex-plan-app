@@ -55,16 +55,37 @@ body {
   text-decoration-style: dotted;
   text-decoration-color:orange; 
 }
+
 .nav a:active {
 
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-style: solid;
-  text-decoration-color:rgb(243, 243, 242); 
-  color:orange;
+  text-decoration-color:rgb(214, 159, 7); 
+  color:rgb(0, 255, 13);
 }
+
 .nav.open {
   max-height: 300px; /* Adjust based on the number of links */
+}
+
+.nav-link {
+  margin: 5px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-style: dotted;
+  text-decoration-color: orange;
+}
+
+.nav a:active{
+  color: #00ff0d; /* Change the font color for the active page */
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Hamburger Button */
@@ -86,11 +107,17 @@ body {
 }
 
 .lang-btn {
-  background-color: transparent;
+  background-color: #ff6600;
   color: #fff;
   border: none;
+  padding: 10px 15px;
   cursor: pointer;
-  font-size: 14px;
+  border-radius: 50px;
+  font-size: 16px;
+}
+
+.lang-btn:hover {
+  background-color: #e05500;
 }
 
 .join-btn {
@@ -157,6 +184,37 @@ body {
   width: 200px; /* Adjust the size as needed */
   height: auto;
   border-radius: 50%; /* Optional: Make it circular */
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 1000;
+  width: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
 }
 
 /* Responsive Styles */
