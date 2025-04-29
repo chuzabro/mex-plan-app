@@ -47,7 +47,8 @@ const Home = () => {
         <div className="actions">
           <div className="dropdown">
             <button className="lang-btn" onClick={toggleDropdown}>
-              English
+              <img src="/images/lang-icon.png" alt="Language" className="flag-icon" />
+              <span className="lang-text">English</span>
             </button>
             {isDropdownOpen && (
               <ul className="dropdown-menu">

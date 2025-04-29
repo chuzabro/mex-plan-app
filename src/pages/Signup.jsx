@@ -42,7 +42,7 @@ const Signup = () => {
   return (
     <div className="signup-page">
       <div className="signup-container">
-        <h1 className="signup-title">Join MAX<span className="highlight">PAIN</span></h1>
+        <h1 className="signup-title">Join To MAX<span className="highlight">PAIN</span></h1>
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
