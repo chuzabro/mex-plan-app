@@ -3,6 +3,7 @@ import "../styles/app.css";
 
 const Home = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("English"); // State to store the selected language
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -11,8 +12,9 @@ const Home = () => {
   const languages = ["English", "Spanish", "French", "German", "Chinese", "Japanese", "Korean", "Russian", "Arabic"];
 
   const handleLanguageSelect = async (language) => {
-    alert(`You selected: ${language}`);
+    setSelectedLanguage(language); // Update the selected language
     setIsDropdownOpen(false); // Close the dropdown after selection
+    console.log(language) // print on console of selected language
 
     try {
       const response = await fetch("https://your-backend-server.com/api/language", {
@@ -48,7 +50,7 @@ const Home = () => {
           <div className="dropdown">
             <button className="lang-btn" onClick={toggleDropdown}>
               <img src="/images/lang-icon.png" alt="Language" className="flag-icon" />
-              <span className="lang-text">English</span>
+              <span className="lang-text">{selectedLanguage}</span> {/* Display the selected language */}
             </button>
             {isDropdownOpen && (
               <ul className="dropdown-menu">
