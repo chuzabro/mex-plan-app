@@ -21,13 +21,18 @@ body {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
-  color: #fff;
+  background: linear-gradient(90deg, #ff6600, #ffd900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 .highlight {
-  color: #ff6600;
+  background: linear-gradient(90deg, #ff0000, #f5dd04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Navbar Styles */
@@ -150,6 +155,56 @@ body {
   margin-top: 100px;
 }
 
+/* Hero Section */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  /* border: solid 2px rgb(211, 76, 13); */
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  /* border: solid 2px rgb(13, 49, 211); */
+}
+
+.hero-max {
+  border: 3px solid #fff;
+  padding: 10px 20px;
+  margin-right: 10px;
+  /* border: solid 2px rgb(13, 211, 128); */
+  
+}
+
+.hero-axpain {
+  letter-spacing: 10px;
+  /* border: solid 2px rgb(243, 15, 110); */
+  
+}
+
+.hero-line {
+  width: 500px;
+  max-width: 400px;
+  height: 3px;
+  background-color: #fff;
+  margin-top: -70px;
+  /* border: solid 2px green; */
+  margin-left: 120px;
+}
+.hero-subtext {
+  font-size: 1.5rem;
+  color:grident(90deg, #ff6600, #f3d214);
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 .branding-title {
   font-size: 40px;
   margin-bottom: 20px;
@@ -249,8 +304,7 @@ body {
 
   .nav {
     flex-direction: column;
-    max-height: 200px(100%);
-    /* overflow: hidden; */
+    max-height: 200px; /* Adjust based on the number of links */
   }
 
   .nav.open {
@@ -258,7 +312,8 @@ body {
   }
 
   .nav a {
-    margin: 10px 0;
+    margin: 8px 0; /* Reduce margin between links */
+    font-size: 14px; /* Shrink font size */
   }
 
   .actions {
@@ -267,28 +322,37 @@ body {
   }
 
   .branding-title {
-    font-size: 30px;
+    font-size: 24px; /* Shrink title font size */
   }
 
   .branding-subtitle {
-    font-size: 20px;
+    font-size: 18px; /* Shrink subtitle font size */
   }
 
   .maxpain {
-    font-size: 5rem;
+    font-size: 4rem; /* Shrink logo text size */
   }
+
   .bottom-right-logo {
-    /* position: fixed; */
-    bottom: 20px;
-    left: 20px;
+    bottom: 15px; /* Adjust position */
+    left: 15px; /* Adjust position */
     z-index: 1000; /* Ensure it stays on top */
   }
-  
+
   .bottom-right-logo img {
-    width: 80px; /* Adjust the size as needed */
+    width: 60px; /* Shrink logo size */
     height: auto;
     border-radius: 50%; /* Optional: Make it circular */
-    /* border: solid 2px wheat; */
+  }
+
+  .lang-btn {
+    padding: 8px 12px; /* Reduce padding */
+    font-size: 14px; /* Shrink font size */
+  }
+
+  .join-btn {
+    padding: 6px 10px; /* Reduce padding */
+    font-size: 12px; /* Shrink font size */
   }
 }
 

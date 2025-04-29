@@ -8,11 +8,29 @@ const Home = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const languages = ["English", "Spanish", "French", "German", "Chinese","japanese","korean","Russian","arabic"];
+  const languages = ["English", "Spanish", "French", "German", "Chinese", "Japanese", "Korean", "Russian", "Arabic"];
 
-  const handleLanguageSelect = (language) => {
+  const handleLanguageSelect = async (language) => {
     alert(`You selected: ${language}`);
     setIsDropdownOpen(false); // Close the dropdown after selection
+
+    try {
+      const response = await fetch("https://your-backend-server.com/api/language", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ language }),
+      });
+
+      if (response.ok) {
+        console.log("Language posted successfully!");
+      } else {
+        console.error("Failed to post language.");
+      }
+    } catch (error) {
+      console.error("Error posting language:", error);
+    }
   };
 
   return (
@@ -20,11 +38,11 @@ const Home = () => {
       <header className="header">
         <div className="logo">MAX<span className="highlight">PAIN</span></div>
         <nav className="nav">
-          <a href="#attorneys">Friends</a>
-          <a href="#subscribers">Subscribers</a>
-          <a href="#providers">Providers</a>
-          <a href="/friends">Attorneys</a>
-          <a href="#meet-max-pain">Meet Max Pain</a>
+          <a href="#attorneys">Home</a>
+          <a href="#subscribers">Providers</a>
+          <a href="#providers">Attorneys</a>
+          <a href="/friends">About</a>
+          <a href="#meet-max-pain">Careers</a>
         </nav>
         <div className="actions">
           <div className="dropdown">
@@ -45,23 +63,28 @@ const Home = () => {
               </ul>
             )}
           </div>
-          <a href="#contact-us" className="help-link">Contact Us</a>
+        
+          <a href="/contact-us" className="help-link">help</a>
+          <a href="/Login" className="help-link">Log In</a>
           <a href="/signup" className="join-btn">Join MAX</a>
         </div>
       </header>
       <main className="main">
         <div className="hero">
           <div className="branding">
-            <h1 className="branding-title">
-              <span className="maxpain">MAX<span className="highlight">PAIN</span></span>
-              <p className="branding">
-              MADICAL ATTRONEY EXCHANGE
-            </p>
+          <div className="hero-content">
+            <h1 className="hero-title">
+              <span className="hero-max">M</span>
+              <span className="hero-axpain">AXPAIN</span>
             </h1>
+            <div className="hero-line"></div>
+            <div className="hero-subtext">MEDICAL ATTORNEY EXCHANGE</div>
+          </div>
             <p className="branding-subtitle">
               Connecting you to the right people when things go left.
             </p>
           </div>
+
         </div>
       </main>
       <div className="bottom-right-logo">
