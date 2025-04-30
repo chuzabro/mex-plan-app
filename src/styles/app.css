@@ -39,6 +39,7 @@ body {
 }
 
 /* Navbar Styles */
+
 .nav {
   display: flex;
   flex-direction: row;
