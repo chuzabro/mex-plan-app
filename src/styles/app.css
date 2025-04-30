@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
   color: #fff;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../public/images/2.jpg") no-repeat center center fixed;
+
   background-size: cover;
 }
 
@@ -245,8 +246,16 @@ body {
   bottom: 20px;
   right: 20px;
   z-index: 1000; /* Ensure it stays on top */
+  animation: pulse 2s infinite;
+  transition: transform 0.2s ease;
 }
 
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: rotate(1); }
+}
 .bottom-right-logo img {
   width: 200px; /* Adjust the size as needed */
   height: auto;
