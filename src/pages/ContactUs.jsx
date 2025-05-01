@@ -37,7 +37,7 @@ const ContactUs = () => {
   return (
     <div className="contactus-page">
       <div className="contactus-container">
-        <h1 className="contactus-title">Send me your Issu</h1>
+        <h1 className="contactus-title">Send me your Issue</h1>
         <form className="contactus-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
