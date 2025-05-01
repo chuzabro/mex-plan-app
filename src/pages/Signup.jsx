@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../styles/signup.css";
 
 const Signup = () => {
@@ -9,6 +10,8 @@ const Signup = () => {
     password: "",
   });
   const [error, setError] = useState("");
+  const [showPopup, setShowPopup] = useState(false); // State to control pop-up visibility
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,6 +22,7 @@ const Signup = () => {
     e.preventDefault();
     const { firstName, lastName, email, password } = formData;
 
+    // Validation
     if (!firstName || !lastName || !email || !password) {
       setError("All fields are required.");
       return;
@@ -34,9 +38,16 @@ const Signup = () => {
       return;
     }
 
+    // If validation passes, show pop-up and redirect to Home page
     setError("");
     console.log("Signup successful:", formData);
-    // Handle signup logic here
+    setShowPopup(true); // Show the pop-up
+
+    // Redirect to Home page after 3 seconds
+    setTimeout(() => {
+      setShowPopup(false); // Hide the pop-up
+      navigate("/"); // Redirect to Home page
+    }, 3000);
   };
 
   return (
@@ -95,9 +106,15 @@ const Signup = () => {
           Already have an account? <a href="/login">Log in</a>
         </p>
       </div>
-      <div className="bottom-right-logo">
-        <img src="/images/app-logo.png" alt="Logo" />
-      </div>
+
+      {/* Pop-up Modal */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup">
+            <p>Welcome to Mex Plan! Your account has been created successfully.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

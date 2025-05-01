@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../styles/contactus.css";
 
 const ContactUs = () => {
@@ -8,9 +8,8 @@ const ContactUs = () => {
     message: "",
   });
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
   const [showPopup, setShowPopup] = useState(false); // State to control pop-up visibility
- 
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,26 +20,27 @@ const ContactUs = () => {
     e.preventDefault();
     const { email, message } = formData;
 
+    // Validation
     if (!email || !message) {
       setError("All fields are required.");
-      setShowPopup(true); // Show pop-up for error
       return;
     }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
       setError("Please enter a valid email address.");
-      setShowPopup(true); // Show pop-up for error
       return;
     }
 
+    // If validation passes, show pop-up and redirect to Home page
     setError("");
-    setSuccess("Your message has been sent successfully!");
-    setShowPopup(true); // Show pop-up for success
     console.log("Contact Us form submitted:", formData);
-  };
+    setShowPopup(true); // Show the pop-up
 
-  const closePopup = () => {
-    setShowPopup(false); // Close the pop-up
+    // Redirect to Home page after 3 seconds
+    setTimeout(() => {
+      setShowPopup(false); // Hide the pop-up
+      navigate("/"); // Redirect to Home page
+    }, 2000);
   };
 
   return (
@@ -67,27 +67,21 @@ const ContactUs = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Enter your message"
-              rows="5"
             ></textarea>
           </div>
+          {error && <p className="error-message">{error}</p>}
           <button type="submit" className="contactus-btn">Send Message</button>
         </form>
-
       </div>
 
       {/* Pop-up Modal */}
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup">
-            <p>{error || success}</p>
-            <button className="popup-close-btn" onClick={closePopup}>Close</button>
+            <p>We got you! We will respond as soon as possible.</p>
           </div>
         </div>
       )}
-
-      <div className="bottom-right-logo">
-        <img src="/images/app-logo.png" alt="Logo" />
-      </div>
     </div>
   );
 };

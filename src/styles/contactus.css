@@ -78,12 +78,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* .success-message {
-  color: #00ff00;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-} */
-
 /* Bottom Right Logo */
 .bottom-right-logo {
   position: fixed;
@@ -125,7 +119,6 @@ textarea {
 
 .popup p {
   font-size: 1rem;
-  margin-bottom: 15px;
   color: #333;
 }
 

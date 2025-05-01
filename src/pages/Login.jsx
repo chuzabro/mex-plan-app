@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../styles/login.css";
 
 const Login = () => {
@@ -7,6 +8,7 @@ const Login = () => {
     password: "",
   });
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,6 +19,7 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = formData;
 
+    // Validation
     if (!email || !password) {
       setError("All fields are required.");
       return;
@@ -27,9 +30,10 @@ const Login = () => {
       return;
     }
 
+    // If validation passes, redirect to Home page
     setError("");
     console.log("Login successful:", formData);
-    // Handle login logic here
+    navigate("/"); // Redirect to Home page
   };
 
   return (
