@@ -47,7 +47,7 @@ const Signup = () => {
     setTimeout(() => {
       setShowPopup(false); // Hide the pop-up
       navigate("/"); // Redirect to Home page
-    }, 3000);
+    }, 2000);
   };
 
   return (

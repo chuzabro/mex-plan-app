@@ -79,7 +79,9 @@
 .login-link a:hover {
   text-decoration: underline;
 }
-
+#message {
+  height: 80px;
+}
 /* Pop-up Overlay */
 .popup-overlay {
   position: fixed;
