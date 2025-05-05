@@ -139,7 +139,8 @@ body {
 }
 
 .join-btn {
-  background-color: #ff0000;
+  /* background-color: #ff0000; */
+  background: linear-gradient(90deg, #ff6600, #ff7300 ,#ff0000);
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -147,10 +148,15 @@ body {
   cursor: pointer;
   border-radius: 30px;
   text-decoration: none;
+  transition-behavior: smooth;
+ 
+  
 }
 
 .join-btn:hover {
-  background-color: #cc0000;
+  background: linear-gradient(90deg,#ff0000 ,#ff6600, #ff7300 );
+  transition-behavior: smooth;
+ 
 }
 
 .help-link {
@@ -162,6 +168,7 @@ body {
 .main {
   padding: 50px 20px;
 }
+
 
 .hero {
   text-align: center;

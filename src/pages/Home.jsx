@@ -40,10 +40,10 @@ const Home = () => {
       <header className="header">
         <div className="logo">MAX<span className="highlight">PAIN</span></div>
         <nav className="nav">
-          <a href="#attorneys">Home</a>
+          <a href="#attorneys">Friends</a>
           <a href="#subscribers">Providers</a>
           <a href="#providers">Attorneys</a>
-          <a href="/friends">About</a>
+          <a href="#friends">About</a>
           <a href="#meet-max-pain">Careers</a>
         </nav>
         <div className="actions">
