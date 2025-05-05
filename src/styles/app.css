@@ -31,6 +31,12 @@ body {
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
+.logo:hover {
+  background: linear-gradient(90deg, #ff0000, #f5dd04, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-behavior: smooth;
+}
 
 .highlight {
   background: linear-gradient(90deg, #ff0000, #f5dd04);
@@ -417,3 +423,10 @@ body {
   }
 
 }
+
+/* Logo Link Styles */
+.logo-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from the parent */
+}
+

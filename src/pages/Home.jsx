@@ -38,10 +38,14 @@ const Home = () => {
   return (
     <div className="app">
       <header className="header">
-        <div className="logo">MAX<span className="highlight">PAIN</span></div>
+        <div className="logo">
+          <a href="/" className="logo-link">
+            MAX<span className="highlight">PAIN</span>
+          </a>
+        </div>
         <nav className="nav">
           <a href="#attorneys">Friends</a>
-          <a href="#subscribers">Providers</a>
+          <a href="#subscribers">Investors</a>
           <a href="#providers">Attorneys</a>
           <a href="#friends">About</a>
           <a href="#meet-max-pain">Careers</a>
