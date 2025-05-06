@@ -78,7 +78,7 @@ const About = () => {
         <div className="footer-text">
         <p>
           We’re always looking for new ways to move the world.
-          <hr className='hr'/>
+          <hr/>
           Join us and help us build the future of transportation.
         </p>
         <button className="join-button">Join us</button>
