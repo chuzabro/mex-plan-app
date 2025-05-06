@@ -73,12 +73,9 @@ body {
 }
 
 .nav a:active {
-
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-style: solid;
-  text-decoration-color:rgb(214, 159, 7); 
-  color:rgb(0, 255, 13);
+  color: #00ff0d; /* Change to your desired color */
+  font-weight: bold; /* Optional: Make the font bold */
+  text-decoration: underline; /* Optional: Add underline */
 }
 
 .nav.open {

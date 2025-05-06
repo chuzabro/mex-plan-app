@@ -47,7 +47,7 @@ const Home = () => {
           <a href="#attorneys">Friends</a>
           <a href="#subscribers">Investors</a>
           <a href="#providers">Attorneys</a>
-          <a href="#friends">About</a>
+          <a href="/about">About</a>
           <a href="#meet-max-pain">Careers</a>
         </nav>
         <div className="actions">
