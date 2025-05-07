@@ -9,12 +9,20 @@ const Signup = () => {
     email: "",
     password: "",
   });
+  const [confirmPassword, setConfirmPassword] = useState(""); // State for confirm password
   const [error, setError] = useState("");
   const [showPopup, setShowPopup] = useState(false); // State to control pop-up visibility
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Validation for firstName and lastName to accept only alphabets
+    if ((name === "firstName" || name === "lastName") && !/^[a-zA-Z]*$/.test(value)) {
+      return; // Prevent updating state if input contains invalid characters
+    }
+
     setFormData({ ...formData, [name]: value });
   };
 
@@ -23,7 +31,7 @@ const Signup = () => {
     const { firstName, lastName, email, password } = formData;
 
     // Validation
-    if (!firstName || !lastName || !email || !password) {
+    if (!firstName || !lastName || !email || !password || !confirmPassword) {
       setError("All fields are required.");
       return;
     }
@@ -35,6 +43,11 @@ const Signup = () => {
 
     if (password.length < 6) {
       setError("Password must be at least 6 characters long.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
       return;
     }
 
@@ -90,14 +103,45 @@ const Signup = () => {
           </div>
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-            />
+            <div className="password-input-container" style={{ position: 'relative' }}>
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                style={{ paddingRight: '30px', width: '95%' }}
+              />
+              <span
+                className="password-toggle-icon"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', cursor: 'pointer' }}
+              >
+                {showPassword ? "🙈" : "👁️"}
+              </span>
+            </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <div className="password-input-container" style={{ position: 'relative' }}>
+              <input
+                type={showPassword ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Confirm your password"
+                style={{ paddingRight: '30px', width: '95%' }}
+              />
+              <span
+                className="password-toggle-icon"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', cursor: 'pointer' }}
+              >
+                {showPassword ? "🙈" : "👁️"}
+              </span>
+            </div>
           </div>
           {error && <p className="error-message">{error}</p>}
           <button type="submit" className="signup-btn">Sign up</button>
