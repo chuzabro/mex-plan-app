@@ -11,8 +11,8 @@ const Attorines = () => {
             <h1>Kirkland Law</h1>
             <p>Solving complex litigation, corporate and tax issues</p>
             <div className="attorneys-hero-buttons">
-              <button className="attorneys-read-more">Read More</button>
-              <button className="attorneys-emergency">Emergency</button>
+              {/* <button className="attorneys-read-more">Read More</button>
+              <button className="attorneys-emergency">Emergency</button> */}
             </div>
           </div>
         </section>
@@ -20,14 +20,14 @@ const Attorines = () => {
         {/* Testimonial Section */}
         <section className="attorneys-testimonial">
           <div className="attorneys-testimonial-content">
-            <img src="/images/testimonial.jpg" alt="Client" className="attorneys-testimonial-image" />
+            <img src="/images/career6.jpg" alt="Client" className="attorneys-testimonial-image" />
             <blockquote>
               "Lorem ipsum dolor sit amet, consectetur elit. Aperiam commodi expedita."
             </blockquote>
             <p>- Johann Doe Patterson</p>
           </div>
           <div className="attorneys-testimonial-image-wrapper">
-            <img src="/images/scales.jpg" alt="Scales of Justice" />
+            <img src="/images/footer-icon.png" alt="Scales of Justice" />
           </div>
         </section>
   
@@ -36,7 +36,7 @@ const Attorines = () => {
           <h2>Expert Lawyers</h2>
           <p>Solving your legal problems</p>
           <div className="attorneys-lawyer-cards">
-            {[1, 2, 3, 4].map((item, index) => (
+            {[1, 2, 3,].map((item, index) => (
               <div key={index} className="attorneys-card">
                 <div className="attorneys-icon">⚖️</div>
                 <h3>Finance</h3>
@@ -49,43 +49,41 @@ const Attorines = () => {
   
         {/* Expert Team */}
         <section className="attorneys-expert-team">
-          <h2>Expert Team</h2>
-          <p>Solving your legal problems</p>
-          <div className="attorneys-team-members">
-            <div className="attorneys-member">
-              <img src="/images/member1.jpg" alt="Elizabeth Wozniak" />
-              <h4>Elizabeth Wozniak</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-            </div>
-            <div className="attorneys-member">
-              <img src="/images/member2.jpg" alt="Johann Albergo Boussou" />
-              <h4>Johann Albergo Boussou</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-            </div>
-          </div>
+
         </section>
   
         {/* Kirkland Team */}
         <section className="attorneys-kirkland-team">
+          <div className="main">
           <div className="attorneys-team-content">
             <h2>Kirkland Team</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque consectetur.
+            As a team leader, I am committed to guiding my team toward achieving 
+            our goals with clarity, collaboration, and accountability.
+             I believe in fostering an environment of trust and open c
+             ommunication, where every team member feels valued and motivated
+              to contribute their best. By setting clear expectations, providing 
+              constructive feedback, and recognizing achievements, I help drive both individual 
+              growth and team success. My focus is not only on delivering results but also on creating
+               a positive and supportive atmosphere 
+            that encourages innovation and continuous improvement.
             </p>
-            <button>Emergency</button>
+            {/* <button>Emergency</button> */}
+            <button className="read-more-button">Read more</button>
           </div>
           <div className="attorneys-team-video">
-            <img src="/images/team-video.jpg" alt="Team Video" />
+            <img src="/images/career3.jpg" alt="Team Video" />
+          </div>
           </div>
         </section>
   
         {/* Footer Logos */}
         <section className="attorneys-footer-logos">
-          <img src="/images/logo1.png" alt="Biotech" />
-          <img src="/images/logo2.png" alt="Eagle" />
-          <img src="/images/logo3.png" alt="Mission" />
-          <img src="/images/logo4.png" alt="JK" />
-          <img src="/images/logo5.png" alt="Profession" />
+          <img src="/images/biotech.jpeg" alt="Biotech" />
+          <img src="/images/egel.jpg" alt="Eagle" />
+          <img src="/images/mission.jpg" alt="Mission" />
+          <img src="/images/jk.png" alt="JK" />
+          <img src="/images/prof.jpg" alt="Profession" />
         </section>
   
         {/* Footer */}

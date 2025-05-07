@@ -25,11 +25,11 @@ const Header = () => {
         </a>
       </div>
       <nav className="nav">
-        <a href="#attorneys">Friends</a>
-        <a href="#subscribers">Investors</a>
-        <a href="#providers">Attorneys</a>
+        <a href="/">Friends</a>
+        <a href="/investor">Investors</a>
+        <a href="/attorneys">Attorneys</a>
         <a href="/about">About</a>
-        <a href="#meet-max-pain">Careers</a>
+        <a href="/careers">Careers</a>
       </nav>
       <div className="actions">
         <div className="dropdown">

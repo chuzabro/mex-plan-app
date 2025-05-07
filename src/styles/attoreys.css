@@ -1,17 +1,30 @@
 .attorneys-page {
   font-family: 'Arial', sans-serif;
   color: #fff;
-  background-color: #121212;
+  /* background-color: #121212; */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/2.jpg") no-repeat center center fixed;
 }
 
 .attorneys-hero {
   /* background: url('/images/hero.jpg') center/cover no-repeat; */
-  /* background: #464545; */
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/career6.jpg") no-repeat center center fixed;
+  background: #0a0a0a;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../public/images/career1.jpg") no-repeat center center fixed;
   text-align: center;
-  padding: 100px 20px;
-}
+  background-position: cover;
+  padding: 110px 10px;
+  width: 100%;
+  height: auto;
+  /* border:solid 1px red; */
+  
 
+}
+.attorneys-hero-content{
+/* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/career6.jpg") no-repeat center center fixed; */
+  padding: 100px 20px;
+  width: 100%;
+  height: auto; 
+   padding: 80px 10px;
+}
 .attorneys-hero h1 {
   font-size: 48px;
   margin-bottom: 10px;
@@ -30,12 +43,22 @@
 }
 
 .attorneys-read-more {
-  background-color: #bfa66a;
+  /* background-color: #bfa66a; */
+  padding: 10px 20px;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ff6600, #ffd900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: solid 2px red;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 
 .attorneys-emergency {
   background-color: transparent;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
+  border:solid 2px black;
 }
 
 .attorneys-testimonial {
@@ -43,8 +66,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 60px 20px;
-  background: #f5f5f5;
-  color: #000;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/2.jpg") no-repeat center center fixed;
+  color:white;
 }
 
 .attorneys-testimonial-content {
@@ -73,11 +96,12 @@
 
 .attorneys-card,
 .attorneys-member {
-  background-color: #1f1f1f;
+  /* background-color: #1f1f1f; */
   margin: 10px;
   padding: 20px;
-  width: 220px;
+  max-width: 220px;
   border-radius: 8px;
+  border: solid 1px #fff;
 }
 
 .attorneys-card button {
@@ -87,26 +111,115 @@
   margin-top: 10px;
 }
 
+.attorneys-expert-lawyers .attorneys-card button {
+  padding: 10px 10px;
+  font-size: 0.7rem;
+  background: linear-gradient(90deg, #ff6600, #ffd900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: solid 1px white;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+.attorneys-expert-lawyers .attorneys-card button:hover {
+  background: linear-gradient(90deg, #ff0000, #f5dd04, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-behavior: smooth;
+  font-size: 0.8rem;
+}
+
 .attorneys-kirkland-team {
   display: flex;
   flex-wrap: wrap;
   padding: 60px 20px;
-  background-color: #1f1f1f;
+  /* background-color: #1f1f1f; */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/2.jpg") no-repeat center center fixed;
 }
 
+.attorneys-kirkland-team .main {
+  display: flex; /* Use Flexbox to arrange items in a row */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Add space between items */
+  gap: 20px; /* Optional: Add spacing between items */
+}
+
+.attorneys-kirkland-team .attorneys-team-content {
+  flex: 1; /* Allow content to take up available space */
+  flex-wrap: wrap;
+}
+
+.attorneys-kirkland-team .attorneys-team-video {
+  flex: 1; /* Allow video to take up available space */
+  text-align: center; /* Center the video/image */
+  flex-wrap: wrap;
+}
+
+.attorneys-expert-team{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* border: solid 2px red; */
+}
+.attorneys-expert-team h2{
+  font-size: 3rem;
+
+}
+.attorneys-member{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: solid 1px white;
+  justify-content: space-between;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/2.jpg") no-repeat center center fixed;
+
+  
+}
+.attorneys-member img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+}
+.main{
+  /* border:solid 1px green; */
+  display: flex;
+flex-wrap: wrap;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  overflow: hidden;
+ 
+}
 .attorneys-team-content,
 .attorneys-team-video {
-  flex: 1;
-  min-width: 250px;
-  margin: 10px;
-}
 
+  min-width: 250px;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  /* border: solid 1px white; */
+}
+.attorneys-team-content h2{
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
 .attorneys-footer-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 40px 20px;
-  background-color: #1f1f1f;
+  /* background-color: #800606; */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/2.jpg") no-repeat center center fixed;
 }
 
 .attorneys-footer-logos img {
@@ -114,16 +227,40 @@
   width: 100px;
 }
 
-.attorneys-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
+
+
+.attorneys-social-icons img {
+  /* margin: 0 10px; */
+  cursor: pointer;
+  border-radius: 100px;
+}
+.attorneys-footer-logos img{
+  border-radius: 150px;
+}
+.attorneys-footer-logos img:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+@media (max-width: 1000px){
+
+  .main{
+   
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    overflow: hidden;
+   
+  }
+  .attorneys-kirkland-team .attorneys-team-video img{
+  width: 80%;
+  max-width: 100%;
+  height: auto;
+  }
 }
 
-.attorneys-social-icons i {
-  margin: 0 10px;
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
   .attorneys-hero h1 {

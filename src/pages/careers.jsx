@@ -11,7 +11,7 @@ const Careers = () => {
           <source src="images/8.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <h1 className="careers-title">Reimagine at Uber</h1>
+        <h1 className="careers-title">Reimagine at Mex Plan</h1>
       </header>
 
       <section className="careers-intro">
