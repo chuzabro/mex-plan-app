@@ -46,7 +46,7 @@ const Home = () => {
         <nav className="nav">
           <a href="#attorneys">Friends</a>
           <a href="/investor">Investors</a>
-          <a href="#providers">Attorneys</a>
+          <a href="/attorneys">Attorneys</a>
           <a href="/about">About</a>
           <a href="/careers">Careers</a>
         </nav>

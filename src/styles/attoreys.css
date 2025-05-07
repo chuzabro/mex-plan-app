@@ -1,0 +1,143 @@
+.attorneys-page {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #121212;
+}
+
+.attorneys-hero {
+  /* background: url('/images/hero.jpg') center/cover no-repeat; */
+  /* background: #464545; */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/career6.jpg") no-repeat center center fixed;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.attorneys-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.attorneys-hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.attorneys-hero-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.attorneys-read-more {
+  background-color: #bfa66a;
+}
+
+.attorneys-emergency {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.attorneys-testimonial {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background: #f5f5f5;
+  color: #000;
+}
+
+.attorneys-testimonial-content {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.attorneys-testimonial-image-wrapper img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.attorneys-expert-lawyers,
+.attorneys-expert-team {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.attorneys-lawyer-cards,
+.attorneys-team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.attorneys-card,
+.attorneys-member {
+  background-color: #1f1f1f;
+  margin: 10px;
+  padding: 20px;
+  width: 220px;
+  border-radius: 8px;
+}
+
+.attorneys-card button {
+  background-color: #bfa66a;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+}
+
+.attorneys-kirkland-team {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background-color: #1f1f1f;
+}
+
+.attorneys-team-content,
+.attorneys-team-video {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.attorneys-footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #1f1f1f;
+}
+
+.attorneys-footer-logos img {
+  margin: 10px;
+  width: 100px;
+}
+
+.attorneys-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+}
+
+.attorneys-social-icons i {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .attorneys-hero h1 {
+    font-size: 32px;
+  }
+
+  .attorneys-testimonial,
+  .attorneys-kirkland-team {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .attorneys-lawyer-cards,
+  .attorneys-team-members {
+    flex-direction: column;
+  }
+}
