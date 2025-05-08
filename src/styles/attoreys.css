@@ -269,6 +269,7 @@ flex-wrap: wrap;
 
   .attorneys-testimonial,
   .attorneys-kirkland-team {
+    display: flex;
     flex-direction: column;
     text-align: center;
   }
@@ -276,5 +277,16 @@ flex-wrap: wrap;
   .attorneys-lawyer-cards,
   .attorneys-team-members {
     flex-direction: column;
+  }
+  .attorneys-testimonial-image-wrapper img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  .attorneys-testimonial-image{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border:#0a0a0a solid 1px;
   }
 }

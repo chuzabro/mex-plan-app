@@ -170,7 +170,9 @@ html{
     border-radius: 10px;
 }
 .investor-section img {
-    width: 400px;
+    /* width: 280px; */
+    width: 25rem;
+    /* max-width: 300px; */
     height: 40vh;
     border-radius: 10px;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
@@ -202,6 +204,15 @@ html{
   .investor-image img {
     max-width: 100%;
   }
+  .investor-section img {
+    width:280px;
+      }
+    .investor-tabs{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+      }    
 }
 
 @media (max-width: 480px) {

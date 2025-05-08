@@ -309,6 +309,13 @@ body {
 .dropdown-item:hover {
   background-color: #f0f0f0;
 }
+.toggle-visibility-btn{
+  display: none;
+}
+.hamburger-btn{
+  display: none;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -330,20 +337,42 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .nav a{
+    display: flex !important; /* Ensure nav is always visible */
+    flex-direction: row; /* Reset to horizontal layout */
+    align-items: center; /* Align items properly */
+    max-height: none; /* Remove height restrictions */
+  }
+
+  .nav a {
+    margin: 5px 20px; /* Reset margins for larger screens */
+    font-size: 16px; /* Reset font size */
+  }
+}
+
+@media (min-width: 769px) {
+  .nav a {
+    display: flex !important;
+    position: static !important;
+    width: auto !important;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column; /* Stack header elements */
     align-items: center;
   }
 
-  .hamburger-btn {
-    display: flex;
+.hamburger-btn {
+    display: inline-block; /* Show hamburger button */
+    margin-left: auto; /* Align to the right */
   }
-
-  .nav {
+  /* .nav {
     flex-direction: column;
-    max-height: 200px; /* Adjust based on the number of links */
-  }
+    max-height: 200px; 
+  } */
 
   .nav.open {
     max-height: 300px; /* Adjust based on the number of links */
@@ -353,34 +382,87 @@ body {
     margin: 8px 0; /* Reduce margin between links */
     font-size: 14px; /* Shrink font size */
   }
-
+  .nav a {
+    display: flex !important;
+    position: static !important;
+    width: auto !important;
+  }
   .actions {
     flex-direction: column; /* Stack action buttons */
     margin-top: 10px;
   }
-
-  .branding-title {
-    font-size: 24px; /* Shrink title font size */
+  .toggle-visibility-btn{
+    display: inline-block;
+  
+   
+  
+  }
+  .hamburger-icon{
+    width: 30px;
+    height:30px;
+    /* border: solid 2px #df1010; */
+    margin-bottom: -40px;
   }
 
+ 
+.branding{
+  /* border: solid 2px rgb(243, 15, 110); */
+  /* margin-top: -200px; */
+text-overflow: wrap;
+  padding: 10px 20px;
+  margin-right: 10px;
+  /* border: solid 2px rgb(13, 211, 128); */
+ 
+}
+
+.hero{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0px;
+  padding: 0px;
+}
+.hero-content {
+    width: 60%;
+    max-width: 60%;
+    height: auto;
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .hero-line {
+    width: 60%;
+    max-width: 60%;
+    /* display: none; */
+    margin-top: -10px;
+    margin-left: 0px;
+    margin-right: -50px;
+    
+  }
+  .hero-title{
+    font-size: 1rem;
+    margin-top: 0px;
+    padding: 0px;
+    /* text-wrap: wrap; */
+   
+    text-align: center;
+  }
   .branding-subtitle {
     font-size: 18px; /* Shrink subtitle font size */
   }
 
   .maxpain {
-    font-size: 4rem; /* Shrink logo text size */
+    font-size: 1rem; /* Shrink logo text size */
   }
 
   .bottom-right-logo {
-    bottom: 15px; /* Adjust position */
-    left: 15px; /* Adjust position */
-    z-index: 1000; /* Ensure it stays on top */
+ display: none;
   }
 
   .bottom-right-logo img {
-    width: 60px; /* Shrink logo size */
+    width: 50%; /* Shrink logo size */
     height: auto;
     border-radius: 50%; /* Optional: Make it circular */
+    border: solid 2px wheat; /* Optional: Add border */
   }
 
   .lang-btn {
@@ -392,6 +474,13 @@ body {
     padding: 6px 10px; /* Reduce padding */
     font-size: 12px; /* Shrink font size */
   }
+
+  .nav {
+    display: flex !important; /* Ensure nav is always visible */
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 @media (max-width: 480px) {

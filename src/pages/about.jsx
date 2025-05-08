@@ -40,7 +40,7 @@ const About = () => {
 
         <div className="about-section">
           <div>
-          <h3>Your safety drives us </h3>
+          <h3>Your safety Mex plan  </h3>
           <p>
             Whether you’re in the back seat or behind the wheel, your safety is essential. We are committed to doing our part, 
             and technology is at the heart of our approach. We partner with safety advocates and develop new technologies and 
@@ -53,7 +53,7 @@ const About = () => {
 
       <section className="about-company-info">
         <div className="company-info-card">
-          <h3>Who’s driving Uber</h3>
+          <h3>Who’s Used Mex Plan</h3>
           <p>
             We’re building a culture within Uber that emphasizes doing the right thing, period, for riders, drivers, and employees. 
             Find out more about the team that’s leading the way.

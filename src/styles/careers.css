@@ -110,3 +110,20 @@
 .carousel-btn:hover {
   color: #ff6600;
 }
+@media (max-width: 768px) {
+  .careers-title {
+    font-size: 2rem;
+  }
+
+  .careers-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .careers-text p {
+    font-size: 0.9rem;
+  }
+
+  .careers-image img {
+    max-width: 100%;
+  }
+}
