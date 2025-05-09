@@ -209,6 +209,26 @@ flex-wrap: wrap;
   gap: 20px;
   /* border: solid 1px white; */
 }
+.attorneys-testimonial-content img {
+  width: 100%;
+  max-width: 600px;
+  /* border-radius: 50%; */
+
+}
+.attorneys-testimonial{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 60px 20px;
+  /* border: solid 1px #fff; */
+
+}
+.attorneys-testimonial-image-wrapper img {
+  width: 100%;
+  max-width: 400px;
+margin-right: 200px;
+  /* border: solid 1px #fff; */
+}
 .attorneys-team-content h2{
   font-size: 3rem;
   margin-bottom: 20px;
