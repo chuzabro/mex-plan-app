@@ -7,6 +7,7 @@ const Home = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(+window.scrollY);
   const [isScrollingUp, setIsScrollingUp] = useState(true); // Define state for scrolling direction
+  const [isMenuVisible, setIsMenuVisible] = useState(false); // Define state for menu visibility
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
