@@ -65,8 +65,7 @@ const Attorines = () => {
               to contribute their best. By setting clear expectations, providing 
               constructive feedback, and recognizing achievements, I help drive both individual 
               growth and team success. My focus is not only on delivering results but also on creating
-               a positive and supportive atmosphere 
-            that encourages innovation and continuous improvement.
+               a positive and supportive 
             </p>
             {/* <button>Emergency</button> */}
             <button className="read-more-button">Read more</button>
@@ -87,9 +86,6 @@ const Attorines = () => {
         </section>
   
         {/* Footer */}
-        <footer className="attorneys-footer">
-         
-        </footer>
       </div>
     );
   };

@@ -1,3 +1,4 @@
+
 .attorneys-page {
   font-family: 'Arial', sans-serif;
   color: #fff;
@@ -12,18 +13,20 @@
   text-align: center;
   background-position: cover;
   padding: 110px 10px;
-  width: 100%;
+  width: auto;
   height: auto;
+  border-radius:5%;
   /* border:solid 1px red; */
   
-
 }
+
 .attorneys-hero-content{
 /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../public/images/career6.jpg") no-repeat center center fixed; */
   padding: 100px 20px;
   width: 100%;
   height: auto; 
    padding: 80px 10px;
+  
 }
 .attorneys-hero h1 {
   font-size: 48px;
@@ -179,6 +182,9 @@
 
   
 }
+.attorneys-testimonial-content img{
+  border-radius: 10%;
+}
 .attorneys-member img {
   width: 100%;
   max-width: 250px;
@@ -208,6 +214,10 @@ flex-wrap: wrap;
   padding: 20px;
   gap: 20px;
   /* border: solid 1px white; */
+}
+.attorneys-team-video img {
+ 
+  border-radius: 10%;
 }
 .attorneys-testimonial-content img {
   width: 100%;
@@ -244,7 +254,7 @@ margin-right: 200px;
 
 .attorneys-footer-logos img {
   margin: 10px;
-  width: 100px;
+  width: 80px;
 }
 
 
@@ -252,10 +262,10 @@ margin-right: 200px;
 .attorneys-social-icons img {
   /* margin: 0 10px; */
   cursor: pointer;
-  border-radius: 100px;
+  border-radius: 100%;
 }
 .attorneys-footer-logos img{
-  border-radius: 150px;
+  border-radius: 100%;
 }
 .attorneys-footer-logos img:hover{
   transform: scale(1.1);
@@ -309,4 +319,6 @@ margin-right: 200px;
     height: auto;
     border:#0a0a0a solid 1px;
   }
+
+
 }
