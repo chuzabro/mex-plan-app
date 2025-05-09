@@ -83,7 +83,10 @@ const Home = () => {
           MAX<span className="highlight">PAIN</span>
         </a>
       </div>
-      <nav className="nav">
+      {/* <button className="hamburger-btn" onClick={toggleMenu}> */}
+        <img src="/images/menu.png" onClick={toggleMenu} alt="Menu" className="hamburger-icon" />
+      {/* </button> */}
+      <nav className={`nav ${isMenuVisible ? "open" : ""}`}>
         <a href="/">Friends</a>
         <a href="/investor">Investors</a>
         <a href="/attorneys">Attorneys</a>

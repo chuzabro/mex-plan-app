@@ -109,13 +109,14 @@ body {
 }
 
 /* Hamburger Button */
-.hamburger-btn {
-  display: none;
+.hamburger-btn img{
+  /* display: none; */
   background: none;
   border: none;
   color: #fff;
   font-size: 24px;
   cursor: pointer;
+  border: #00ff0d solid 2px;
 }
 
 .actions {
@@ -311,14 +312,14 @@ body {
   background-color: #f0f0f0;
 }
 .toggle-visibility-btn{
-  display: none;
-}
-.hamburger-btn{
-  display: none;
+  display:inline-block;
 }
 
+.hamburger-icon{
+  width:0px;
+  height:0px;
+}
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .branding-title {
     font-size: 35px;
@@ -336,6 +337,9 @@ body {
     padding: 8px 12px;
     font-size: 14px;
   }
+  /* .hamburger-icon{
+    display: none;
+  } */
 }
 
 @media (min-width: 1024px) {
@@ -358,6 +362,8 @@ body {
     position: static !important;
     width: auto !important;
   }
+
+
 }
 
 @media (max-width: 768px) {
@@ -366,9 +372,17 @@ body {
     align-items: center;
   }
 
-.hamburger-btn {
+.hamburger-btn img{
     display: inline-block; /* Show hamburger button */
-    margin-left: auto; /* Align to the right */
+    margin-left: auto;
+    border:solid 2px #cc0000; 
+    margin-right: 50%;/* Align to the right */
+  }
+  .hamburger-btn .hamburger-icon{
+    width: 50px;
+    height:50px;
+    /* border: solid 2px #df1010; */
+    margin-left: 200px;
   }
   /* .nav {
     flex-direction: column;
@@ -394,15 +408,15 @@ body {
   }
   .toggle-visibility-btn{
     display: inline-block;
-  
-   
-  
+    background: none;
   }
-  .hamburger-icon{
+   .hamburger-icon{
     width: 30px;
     height:30px;
     /* border: solid 2px #df1010; */
-    margin-bottom: -40px;
+    margin-right: 250px;
+    border:solid 2px #2c00cc; 
+    margin-top: -12%;
   }
 
  
@@ -477,9 +491,40 @@ text-overflow: wrap;
   }
 
   .nav {
-    display: flex !important; /* Ensure nav is always visible */
+    display: none;
     flex-direction: column;
     align-items: center;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  /* .hamburger-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  } */
+  .close-icon{
+    width: 30px;
+    height:30px;
+    /* border: solid 2px #df1010; */
+    margin-bottom: -40px;
   }
 
 }

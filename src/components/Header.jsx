@@ -4,17 +4,21 @@ import "../styles/app.css";
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to manage dropdown visibility
   const [selectedLanguage, setSelectedLanguage] = useState("English"); // State to manage selected language
-  const languages = ["English", "Spanish", "French", "German", "Chinese", "Japanese", "Korean", "Russian", "Arabic"]; // Example languages
+  const [isNavOpen, setIsNavOpen] = useState(false); // State to manage nav visibility on small screens
 
-  // Function to toggle the dropdown
+  const languages = ["English", "Spanish", "French", "German", "Chinese", "Japanese", "Korean", "Russian", "Arabic"];
+
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // Function to handle language selection
   const handleLanguageSelect = (language) => {
     setSelectedLanguage(language);
     setIsDropdownOpen(false); // Close the dropdown after selection
+  };
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen); // Toggle nav visibility
   };
 
   return (
@@ -24,7 +28,9 @@ const Header = () => {
           MAX<span className="highlight">PAIN</span>
         </a>
       </div>
-      <nav className="nav">
+        <img onClick={toggleNav} src="/images/menu.png" alt="Menu" className="hamburger-icon" />
+      <nav className={`nav ${isNavOpen ? "open" : "closed"}`}>
+          <img  onClick={toggleNav} src="/images/menu.png" alt="Close" className="hamburger-icon" />
         <a href="/">Friends</a>
         <a href="/investor">Investors</a>
         <a href="/attorneys">Attorneys</a>
