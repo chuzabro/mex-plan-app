@@ -88,7 +88,7 @@ const Home = () => {
       {/* </button> */}
       <nav className={`nav ${isMenuVisible ? "open" : ""}`}>
         <a href="/">Friends</a>
-        <a href="/investor">Investors</a>
+        <a href="/investor">Providers</a>
         <a href="/attorneys">Attorneys</a>
         <a href="/about">About</a>
         <a href="/careers">Careers</a>

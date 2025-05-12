@@ -32,7 +32,7 @@ const Header = () => {
       <nav className={`nav ${isNavOpen ? "open" : "closed"}`}>
           <img  onClick={toggleNav} src="/images/menu.png" alt="Close" className="hamburger-icon" />
         <a href="/">Friends</a>
-        <a href="/investor">Investors</a>
+        <a href="/investor">Prividers</a>
         <a href="/attorneys">Attorneys</a>
         <a href="/about">About</a>
         <a href="/careers">Careers</a>
