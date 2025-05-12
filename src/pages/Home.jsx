@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/app.css";
+import "./about"
 
 const Home = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -78,6 +79,7 @@ const Home = () => {
   return (
     <div>
     <header className="header">
+     
       <div className="logo">
         <a href="/" className="logo-link">
           MAX<span className="highlight">PAIN</span>
@@ -138,6 +140,7 @@ const Home = () => {
       <div className="bottom-right-logo">
         <img src="/images/app-logo.png" alt="Logo" />
       </div>
+
     </div>
   );
 };

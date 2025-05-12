@@ -5,6 +5,7 @@ const About = () => {
   return (
     <div className="about-page">
         <Header />
+    <div className="about-page-content">
       <header className="about-header">
 
         <h1 className="about-title">About</h1>
@@ -84,6 +85,7 @@ const About = () => {
         <button className="join-button">Join us</button>
         </div>
       </footer>
+      </div>
     </div>
   );
 };
