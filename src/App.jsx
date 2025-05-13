@@ -8,6 +8,7 @@ import About from "./pages/about";
 import Investor from "./pages/investor";
 import Careers from "./pages/careers";
 import Attorines from "./pages/attorneys";
+import SubscriptionPlans from "./components/SubscriptionPlans";
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/investor" element={<Investor />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/attorneys" element={<Attorines />} />        
+        <Route path="/attorneys" element={<Attorines />} />
+        <Route path="/SubscriptionPlans" element={<SubscriptionPlans />} />        
         {/* Add more routes as needed */}
        
       </Routes>

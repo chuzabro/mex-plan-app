@@ -45,7 +45,8 @@ const Signup = () => {
     }
 
     setError("");
-    navigate("/");
+    navigate("/SubscriptionPlans"); // Redirect to About page
+    console.log("Signup successful:", formData);
   };
 
   return (

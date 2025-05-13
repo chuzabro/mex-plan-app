@@ -1,0 +1,143 @@
+.subscription-page {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  /* border: #dd0909 solid 1px; */
+  margin-top: 120px;
+  
+}
+
+.subscription-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+
+.subscription-subtitle {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 20px;
+
+}
+
+.subscription-subtitle a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.subscription-subtitle a:hover {
+  text-decoration: underline;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+}
+
+.plan-card {
+  /* background: #f9f9f9; */
+  border: 1px solid white;
+ 
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.plan-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
+
+.plan-price {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  color: white;
+  
+}
+
+.plan-description {
+  font-size: 0.9rem;
+  /* color: #666; */
+  margin-bottom: 15px;
+  color: white;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+  
+  
+}
+
+.feature-item {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+  color: white;
+ 
+}
+
+.plan-button {
+  /* background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+   */
+   padding: 10px 10px;
+   font-size: 0.8rem;
+   background: linear-gradient(90deg, #ff6600, #ffd900);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   border: solid 1px white;
+   border-radius: 5px;
+   cursor: pointer; 
+}
+
+.plan-button:hover {
+  /* background: #0056b3; */
+  background: linear-gradient(90deg, #ff0000, #f5dd04, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-behavior: smooth;
+  font-size: 0.9rem;
+}
+
+.popular {
+  /* background: #e0f7fa; */
+
+  border: 1px solid white;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffeb3b;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+}

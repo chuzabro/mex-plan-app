@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/app.css";
 import "./about"
-
+// import SubscriptionPlans from "../components/SubscriptionPlans";
 const Home = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
@@ -140,7 +140,7 @@ const Home = () => {
       <div className="bottom-right-logo">
         <img src="/images/app-logo.png" alt="Logo" />
       </div>
-
+    {/* <SubscriptionPlans/> */}
     </div>
   );
 };
